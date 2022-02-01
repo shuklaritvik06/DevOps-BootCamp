@@ -2,11 +2,11 @@
 
 **List files Commands**
 
-ls   // list
-ls -l  // list files with modes
-ls -a // list all files including hidden too, previous and current Directory paths can also be seen
-ls -R // list all files recursively, even inside the folders
-ls -la // list all with modes, we can combine options like this
+- ls   // list
+- ls -l  // list files with modes
+- ls -a // list all files including hidden too, previous and current Directory paths can also be seen
+- ls -R // list all files recursively, even inside the folders
+- ls -la // list all with modes, we can combine options like this
 
 **Directory Commands**
 
