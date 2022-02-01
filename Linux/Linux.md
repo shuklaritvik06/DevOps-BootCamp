@@ -10,13 +10,13 @@ ls -la // list all with modes, we can combine options like this
 
 **Directory Commands**
 
-cd DirectoryName   // change Directory
-cd ..  // cd back
-cd ~ // cd home Directory   OR cd
-open DirectoryName  // Open a Directory, also can be used to open a file in their default application
-pwd  // Prints the current working Directory location
-mkdir dirName // Make a Directory with a name given
-mkdir -p dir1/middle/dir2 // This command can create parent directories as needed and the middle one
+- cd DirectoryName   // change Directory
+- cd ..  // cd back
+- cd ~ // cd home Directory   OR cd
+- open DirectoryName  // Open a Directory, also can be used to -  open a file in their default application
+- pwd  // Prints the current working Directory location
+- mkdir dirName // Make a Directory with a name given
+- mkdir -p dir1/middle/dir2 // This command can create parent directories as needed and the middle one
 
 Process ->  Any instance of a running command is called a Process.
 
@@ -29,15 +29,15 @@ You can set the environment variables using the command `export VARIABLENAME=VAL
 `> This will write the content and will erase all the previous content of the exisiting file in which we are writing`
 `>> This is used to append the content`
 
-cat fileName  // Prints the content of the file
-**cat > fileName**  // It will create a file with the given file name and we can give the content in terminal, after completion we can press `CTRL+D` and this would be written in the file.
-cat file1 file2 ..... >> file2  // This will append the file1, file2 and so on content to file2
-echo "Hi" > fileName  // It will write Hi in file given.
-touch fileName  // will create a new file
-head fileName // It shows the first 10 lines of the file
-head -n count fileName  // It shows the count number of lines from the file
-tail fileName  // It shows the last 10 lines of the file
-tail -n count fileName // It shows the count number of lines from the file
+- cat fileName  // Prints the content of the file
+- **cat > fileName**  // It will create a file with the given file - name and we can give the content in terminal, after completion we can press `CTRL+D` and this would be written in the file.
+- cat file1 file2 ..... >> file2  // This will append the file1, - file2 and so on content to file2
+- echo "Hi" > fileName  // It will write Hi in file given.
+- touch fileName  // will create a new file
+- head fileName // It shows the first 10 lines of the file
+- head -n count fileName  // It shows the count number of lines from the file
+- tail fileName  // It shows the last 10 lines of the file
+- tail -n count fileName // It shows the count number of lines from the file
 
 **Pipe**
 
@@ -57,20 +57,20 @@ man // Means Manual, it will show the manual of the particular command in the te
 
 **Copy and Move**
 
-cp fileName1 fileName2   // Used to Copy file contents to the other file
-mv currentpath finalpath  // Used to move the files or directories
-mv fileName newName  // Rename the file
-cp -R directoryName newlocation  // recursively copy
+- cp fileName1 fileName2   // Used to Copy file contents to the - other file
+- mv currentpath finalpath  // Used to move the files or directories
+- mv fileName newName  // Rename the file
+- cp -R directoryName newlocation  // recursively copy
 
 
 **Remove command**
 
-rm -d DirName  // If empty directory
-rm -r Dirname  // recursive removal , Delete everything inside the dir
-rmdir DirName //same as rm -d, only removes if dir is empty
-rm *.txt // means anything with extension of .txt
-rm -rf file.dir   // FORCE delete **Use with caution**
-rm * // delete every file  **Use with caution** Never run in root
+- rm -d DirName  // If empty directory
+- rm -r Dirname  // recursive removal , Delete everything inside the dir
+- rmdir DirName //same as rm -d, only removes if dir is empty
+- rm *.txt // means anything with extension of .txt
+- rm -rf file.dir   // FORCE delete **Use with caution**
+- rm * // delete every file  **Use with caution** Never run in root
 
 **Root Related commands**
 
@@ -86,14 +86,14 @@ du -h // human readable
 
 **Find/Locate Commands**
 
-locate "*.txt" // Shows all the files with .txt extension
-find . -name fileName  // In cwd find
-find . -name "*.txt"  // Find all with .txt extension in current directory
-find . -iname fileName  // Find the file in the current directory and ignore the case
-find . -type d -name dirName   // Find the directory in the current Directory
-find DirName  // list all files in that dir
-find . -mmin +10 +mmin -20 // Find all the files in the current directory which is created more than 10 minutes ago and less than 20 min ago
-find . -mtime -10  // less than 10 days ago
+- locate "*.txt" // Shows all the files with .txt extension
+- find . -name fileName  // In cwd find
+- find . -name "*.txt"  // Find all with .txt extension in current - directory
+- find . -iname fileName  // Find the file in the current directory - and ignore the case
+- find . -type d -name dirName   // Find the directory in the - current Directory
+- find DirName  // list all files in that dir
+- find . -mmin +10 +mmin -20 // Find all the files in the current directory which is created more than 10 minutes ago and less than 20 min ago
+- find . -mtime -10  // less than 10 days ago
 
 cmin -> minutes
 ctime -> dates
@@ -128,17 +128,17 @@ find . -type f -name "*.txt" -exec rm -rf {} +  // {} is placeholder where all o
 
 **Grep Command**
 
-grep "data" fileName
-grep -w "data" fileName  // find word
-grep -i "data" fileName  // Not case sensitive now
-grep -iw "data" fileName // A word + Not case sensitive
-grep -n "data" fileName  // Shows the line number also on which the match is found
-grep -win "data" fileName  // All three options
-grep -B n "data" fileName // It will show n lines previous to the data
-grep -win "data" ./*.txt  // Current directory search in All
-grep -rwin "data" files // Recursive search
-grep -l "data" fileName // This will show all the files which contain the given data
-grep -c "data" fileName  // It will show how many times the given match is there
+- grep "data" fileName
+- grep -w "data" fileName  // find word
+- grep -i "data" fileName  // Not case sensitive now
+- grep -iw "data" fileName // A word + Not case sensitive
+- grep -n "data" fileName  // Shows the line number also on which the match is found
+- grep -win "data" fileName  // All three options
+- grep -B n "data" fileName // It will show n lines previous to the data
+- grep -win "data" ./*.txt  // Current directory search in All
+- grep -rwin "data" files // Recursive search
+- grep -l "data" fileName // This will show all the files which contain the - given data
+- grep -c "data" fileName  // It will show how many times the given match is there
 
 **History Command**
 
@@ -153,20 +153,20 @@ less fileName  //Show the content of the file which you want page by page
 
 **User/Group Commands**
 
-adduser username  // Add the user
-cat /etc/passwd  //shows the users
-deluser username  //delete the user
-passwd username   //change the user password
+- adduser username  // Add the user
+- cat /etc/passwd  //shows the users
+- deluser username  //delete the user
+- passwd username   //change the user password
 
 // Group means users with the same permission
 // There is a unique primary group for each person
 
-addgroup GroupName
-usermod -a -G GroupName UserName
-grous UserName   // Shows Primary group and secondary(if have)
-gpasswd -d UserName GroupName   //Delete the user from the group
-delgroup GroupName  // Delete the group you want
-**visudo**   // Will open sudoers file in the nano text editor,Navigate to User privilege section , Add path of the command u want to give the permission of
+- addgroup GroupName
+- usermod -a -G GroupName UserName
+- grous UserName   // Shows Primary group and secondary(if have)
+- gpasswd -d UserName GroupName   //Delete the user from the group
+- delgroup GroupName  // Delete the group you want
+- **visudo**   // Will open sudoers file in the nano text editor,Navigate to - User privilege section , Add path of the command u want to give the permission of
 
 
 **Zip Unzip**
@@ -178,11 +178,11 @@ unzip resultFileName // To unzip
 **OS Related commands**
 
 
-uname  // Shows which kernel the OS is having
-uname -o // Which type
-uname -m  // Architecture
-uname -r // Kernel Version
-cat /etc/os-release  // Os release info
+- uname  // Shows which kernel the OS is having
+- uname -o // Which type
+- uname -m  // Architecture
+- uname -r // Kernel Version
+- cat /etc/os-release  // Os release info
 
 
 **CPU**
@@ -208,13 +208,13 @@ echo "first" || echo "second"  // Second command will run when the first does no
 
 **Curl**
 
-curl sends a request to an endpoint you choose
-
-curl url  //get request
-curl -X POST url  //Post request
-curl -X POST --data "p1=value1&p2=value2" URL
-curl -X POST -d param1=value1 -d param2=value2 .... URL
-curl -o fileName url  
+- curl sends a request to an endpoint you choose
+-
+- curl url  //get request
+- curl -X POST url  //Post request
+- curl -X POST --data "p1=value1&p2=value2" URL
+- curl -X POST -d param1=value1 -d param2=value2 .... URL
+- curl -o fileName url  
 
 **Cronjobs**
 
@@ -245,11 +245,11 @@ How to run a script?
 
 
 
-uptime  -> for how much time the current system is up
-wall message  -> Will broadcast this message to all the users currently logged in
-write  UserName -> this can be used to chat in simple message to other user currently logged in
-mesg y or n  -> Enable or disable the ability to receive messages
-who -> shows the users logged in to the system
-sort fileName -> Sort the filedata in the ascending order
-sort -r fileName ->  Sort the filedata in the descending order
-shutdown -h TIME -> shut down your linux machine  (eg. shutdown -h now  OR shutdown -h +10)
+- uptime  -> for how much time the current system is up
+- wall message  -> Will broadcast this message to all the users currently logged in
+- write  UserName -> this can be used to chat in simple message to other user  currently logged in
+- mesg y or n  -> Enable or disable the ability to receive messages
+- who -> shows the users logged in to the system
+- sort fileName -> Sort the filedata in the ascending order
+- sort -r fileName ->  Sort the filedata in the descending order
+- shutdown -h TIME -> shut down your linux machine  (eg. shutdown -h now  OR - shutdown -h +10)
