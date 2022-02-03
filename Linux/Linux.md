@@ -43,17 +43,24 @@ You can set the environment variables using the command `export VARIABLENAME=VAL
 
 `> is redirecting the output to a new file`
 
-cat file.txt | tr a-z A-Z > newfileName  // The output of cat file.txt would be passed to next command.
+- cat file.txt | tr a-z A-Z > newfileName  // The output of cat file.txt would be passed to next command.
 
-tr -> translate/delete char command
+- tr -> translate/delete char command
 
-cat firstCommand \
+- cat firstCommand \   
 secondCommand
 
 **Info Commands**
 
-man // Means Manual, it will show the manual of the particular command in the terminal
+- **man** // Means Manual, it will show the manual of the particular command in the terminal
+- **info** // infocommand reads documentation in the info format. It will give detailed information for a command when compared with the man page.
 
+**Users Loggedin**
+
+- last // Show a listing of last logged in users.
+- last -i // Shows the ip address of the logged in users in number dot format
+- last -s YYY-MM-DD hh:mm:ss // You can give time too , search since the given time.
+- last -t YYY-MM-DD hh:mm:ss // Until the given time
 
 **Copy and Move**
 
@@ -79,10 +86,14 @@ sudo commandName // when command need more perms to run successfully.
 
 **Disc Related Commands**
 
-df // show the disk space
-df -h // free disk space in human readable format
-du // Disk usage statistic for the current directory
-du -h // human readable
+- df // show the disk space
+- df -h // free disk space in human readable format
+- du // Disk usage statistic for the current directory
+- du -h // human readable
+
+**Date/Time Commands**
+
+- date // We can get the current day date time, we can also set the date using this command, using `date --date=STRING`.
 
 **Find/Locate Commands**
 
@@ -98,25 +109,30 @@ du -h // human readable
 cmin -> minutes
 ctime -> dates
 
+**User information**
+
+- finger username  // Shows the info of the user
+- lslogins // This command is used to print the system accounts, user accounts
+- getent // Fetches information from database configured in   `/etc/nssswitch.conf`
 
 **Changing Perms**
 
-0 (0,0,0) -> `No Perms`
-1 (0,0,1) -> `Execute only`
-2 (0,2,0) -> `Write only`
-4 (4,0,0) -> `Read only`
-7 (4,2,1) -> `Read, Write Execute`
+- 0 (0,0,0) -> `No Perms`
+- 1 (0,0,1) -> `Execute only`
+- 2 (0,2,0) -> `Write only`
+- 4 (4,0,0) -> `Read only`
+- 7 (4,2,1) -> `Read, Write Execute`
 
 777 -> user,group,other
 
 d -> directory
 `-` -> file
 
-chmod u=Perms,g=perms,o=perms fileName
-chmod +x fileName  -> All users executable perms
-chmod a+w,g-rw,o-x fileName  // Add write to all, remove read write from group and remove executable from others
+- chmod u=Perms,g=perms,o=perms fileName
+- chmod +x fileName  -> All users executable perms
+- chmod a+w,g-rw,o-x fileName  // Add write to all, remove read write from group and remove executable from others
 
-whoami  // Shows who is currently logged in to the system
+- whoami  // Shows who is currently logged in to the system
 
 **Change Ownership**
 
@@ -124,7 +140,7 @@ sudo chown root fileName  // Ownership changes to root
 
 **Multiple files Execution Command**
 
-find . -type f -name "*.txt" -exec rm -rf {} +  // {} is placeholder where all outputs are put one by one and + means the command will be executed on all
+- find . -type f -name "*.txt" -exec rm -rf {} +  // {} is placeholder where all outputs are put one by one and + means the command will be executed on all
 
 **Grep Command**
 
@@ -142,14 +158,17 @@ find . -type f -name "*.txt" -exec rm -rf {} +  // {} is placeholder where all o
 
 **History Command**
 
-history  // Shows all the history of Commands
-history -n count // Shows previous count number of commands
+- history  // Shows all the history of Commands
+- history -n count // Shows previous count number of commands
 
-**Multiple Commands** -> cd hello;touch Learning.txt;echo "Learning DevOps" > Learning.txt
+**Multiple Commands**
+
+- cd hello;touch Learning.txt;echo "Learning DevOps" > Learning.txt
 
 // Find location of the specific command = which commandName
 
-less fileName  //Show the content of the file which you want page by page
+- less fileName  //Show the content of the file which you want page by page
+- more fileName //
 
 **User/Group Commands**
 
@@ -171,8 +190,8 @@ less fileName  //Show the content of the file which you want page by page
 
 **Zip Unzip**
 
-zip resultFileName file1 file2   // This will zip the file
-unzip resultFileName // To unzip
+- zip resultFileName file1 file2   // This will zip the file
+- unzip resultFileName // To unzip
 
 
 **OS Related commands**
@@ -187,29 +206,29 @@ unzip resultFileName // To unzip
 
 **CPU**
 
-lscpu // Prints the CPU details
+- lscpu // Prints the CPU details
 
 **Memory**
 
-free // Free Memory
-free -h // Human readable
-vmstat
+- free // Free Memory
+- free -h // Human readable
+- vmstat
 
+- nslookup sitName // Infor of the site , ip
 
-nslookup sitName // Infor of the site , ip
+**Cut Command**
 
 cut -c 1-2 fileName  // Get data column wise from a file
 
 
 **Operators**
 
-echo "first" && echo "second"  // Second command will only run when the first run successfully
-echo "first" || echo "second"  // Second command will run when the first does not run successfully
+- echo "first" && echo "second"  // Second command will only run when the first run successfully
+- echo "first" || echo "second"  // Second command will run when the first does not run successfully
 
 **Curl**
 
 - curl sends a request to an endpoint you choose
--
 - curl url  //get request
 - curl -X POST url  //Post request
 - curl -X POST --data "p1=value1&p2=value2" URL
