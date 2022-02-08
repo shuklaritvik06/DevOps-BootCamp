@@ -40,7 +40,7 @@ ISP -> `Modem/Router` -> D1,D2,D3
 
 All the devices connected to this wifi will have the same IP , called Global IP Address. Router gives separate local IP Addresses to all these devices using DHCP (Dynamic Host Configuration Protocol).
 
-When any device connected to this wifi sends a request to `google.com` it has the global IP, then Modem/Router will decide who requested it, and show the response to them. It is done by `NAT`(Network Access Translator).
+When any device connected to this wifi sends a request to `www.google.com` it has the global IP, then Modem/Router will decide who requested it, and show the response to them. It is done by `NAT`(Network Access Translator).
 
 IP Address decides which device to send the data whereas port numbers are used to identify which application made that request.
 
